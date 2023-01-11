@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-primary: #39b54a;
+    --color-dark: #000;
+    --color-light: #fff;
+    --color-grey: rgb(182, 182, 182);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+}
+
+header {
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.781), #39b54aaf);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-bg {
+    width: 120%;
+    position: absolute;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    height: 100px;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--color-light);
+}
+
+.logo span {
+    color: var(--color-primary);
+    font-size: 4rem;
+}
+
+.hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.hamburgerText {
+    color: var(--color-light);
+    font-size: 1.3rem;
+    font-weight: 300;
+    transition: .5s;
+}
+
+.hamburgerLines {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 30px;
+    gap: 6px;
+    transition: .5s;
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-light);
+    transition: .5s;
+}
+
+.hamburger:hover .hamburgerText {
+    color: var(--color-primary);
+}
+
+.hamburger:hover .hamburgerLines {
+    gap: 8px;
+}
+
+.mainMenuContainer {
+    position: fixed;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.801)), url('./assets/green-vert.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 300px;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    display: none;
+}
+
+.closeMenu {
+    color: var(--color-light);
+    position: absolute;
+    top: 20px;
+    right: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.mainMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mainMenu li a {
+    color: var(--color-light);
+    font-size: 1.3rem;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 100px);
+    color: var(--color-light);
+    justify-content: center;
+    padding: 4rem;
+}
+
+.heroLeft {
+    /* max-width: 1200px; */
+    width: 100%;
+}
+
+.heroLeft h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-primary);
+}
+
+.heroLeft h1 {
+    font-size: 5rem;
+    margin: 1rem 0;
+}
+
+.heroLeft p {
+    color: var(--color-grey);
+    font-size: 1.1rem;
+    line-height: 150%;
+    margin-bottom: 4rem;
+}
+
+.heroLeftButtons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 1rem 3rem;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+#about {
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.aboutLeft {
+    flex: 1;
+    padding: 4rem;
+}
+
+.aboutLeft h3 {
+    font-size: 2rem;
+    color: #39b54a;
+    font-weight: 400;
+}
+
+.aboutLeft h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.aboutLeft p {
+    font-size: 1.1rem;
+    line-height: 150%;
+    color: var(--color-grey)
+}
+
+.aboutRight {
+    flex: 1;
+    position: relative;
+}
+
+.aboutRight::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.678), #39b54a56);
+    position: absolute;
+}
+
+.aboutRight img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* portfolio */
+
+#portfolio {
+    background-color: #000;
+}
+
+#portfolio h1 {
+    color: white;
+    text-align: center;
+    padding: 7rem 0;
+    font-size: 4rem;
+    color: #39b54a;
+    font-weight: 500;
+}
+
+.gallery {
+    display: flex;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#portfolio img {
+    width: 400px;
+}
+
+/* pricing */
+#pricing {
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.692), transparent), url('/assets/lamp-hor.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 10rem 0 5rem 0;
+}
+
+#pricing h1 {
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+}
+
+.pricingCards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pricingCard {
+    height: fit-content;
+    width: 400px;
+    padding: 2rem 0;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.384);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.411);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricingCard h2 {
+    background-color: #39b54a;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pricingCard h3 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    font-weight: 500;
+}
+
+.packageDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.packageDetails li span {
+    padding: .3rem;
+    color: #39b54a;
+}
+
+.pricingCard .btn {
+    margin-top: 3rem;
+}
+
+
+/* contact */
+.contactSection {
+    padding: 5rem 0;
+}
+
+.contactSection h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #39b541;
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+
+.contactForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem
+}
+
+.contactForm>div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    min-width: 300px;
+    width: 50%;
+}
+
+.contactForm>div>label {
+    color: #39b541;
+}
+
+.contactForm>div>input {
+    all: unset;
+    border-bottom: 2px solid #39b541;
+    padding: .5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.contactForm>div>textarea {
+    all: unset;
+    border-bottom: 2px solid #39b541;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: .5rem 1rem;
+}
+
+.contactForm .submit>button {
+    all: unset;
+    text-align: center;
+    padding: 1rem;
+    background-color: #39b54a;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.contactForm .submit>button:hover {
+    background-color: #39b54aea;
+}
+
+/* footer */
+footer p {
+    background-color: #39b54a;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+footer p a {
+    color: white;
+    text-decoration: underline;
+}
